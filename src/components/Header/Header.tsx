@@ -5,6 +5,9 @@ import { useState } from "react";
 
 export function Header() {
   const [isactive, setActive] = useState(false);
+  function closeMenu() {
+    setActive(false);
+  }
 
   return (
     <Container>
@@ -15,14 +18,17 @@ export function Header() {
         </HashLink>
 
         <nav className={isactive ? "active" : ""}>
-          <NavHashLink smooth to="#home">
+          <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
           </NavHashLink>
-          <NavHashLink smooth to="#aboutme">
+          <NavHashLink smooth to="#aboutme" onClick={closeMenu}>
             About me
           </NavHashLink>
-          <NavHashLink smooth to="#portfolio">
+          <NavHashLink smooth to="#portfolio" onClick={closeMenu}>
             Portfolio
+          </NavHashLink>
+          <NavHashLink smooth to="#contact" onClick={closeMenu}>
+            Contact
           </NavHashLink>
         </nav>
 

@@ -45,4 +45,10 @@ export const Container = styled.section`
       display: none;
     }
   }
+  @media (max-width: 600px) {
+    margin-top: 25%;
+  }
+  @media (max-width: 480px) {
+    margin-top: 35%;
+  }
 `;

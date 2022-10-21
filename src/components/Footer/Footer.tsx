@@ -16,7 +16,7 @@ export function Footer() {
       <div>
         <p>
           Diese Seite wurde mit <img src={reactIcon} alt="React Icon" /> und
-          viel ❤️ erstellt
+          viel <span>❤️</span> erstellt
         </p>
       </div>
 
