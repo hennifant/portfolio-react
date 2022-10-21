@@ -1,9 +1,37 @@
-import { Container } from "./styles";
+import { Container, ContainerSuccess } from "./styles";
 import { useForm, ValidationError } from "@formspree/react";
+import { toast, ToastContainer } from "react-toastify";
+import arrowImage from "../../assets/arrow.svg";
+import { useEffect } from "react";
 
 export function Form() {
   const [state, handleSubmit] = useForm("mymessage");
-
+  useEffect(() => {
+    if (state.succeeded) {
+      toast.success("Email erfolgreich zugestellt", {
+        position: toast.POSITION.BOTTOM_LEFT,
+        pauseOnFocusLoss: false,
+        closeOnClick: true,
+        hideProgressBar: false,
+        toastId: "succeeded",
+      });
+    }
+  });
+  if (state.succeeded) {
+    return (
+      <ContainerSuccess>
+        <h3>Vielen Dank für Ihre Kontaktaufnahme!</h3>
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          Voltar ao topo
+        </button>
+        <ToastContainer />
+      </ContainerSuccess>
+    );
+  }
   return (
     <Container>
       <h2>Kontaktieren Sie mich auch gerne über dieses Formular</h2>
@@ -24,6 +52,7 @@ export function Form() {
           Absenden
         </button>
       </form>
+      <ToastContainer />
     </Container>
   );
 }

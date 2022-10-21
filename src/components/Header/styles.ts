@@ -78,6 +78,7 @@ export const Container = styled.header`
     height: 0;
     width: 0;
     visibility: hidden;
+    outline: none;
   }
   label {
     cursor: pointer;
