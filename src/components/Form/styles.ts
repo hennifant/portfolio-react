@@ -33,6 +33,7 @@ export const Container = styled.div`
     textarea {
       height: 20rem;
       overflow-y: auto;
+      resize: none;
     }
     button {
       padding: 1rem 6rem;
@@ -55,9 +56,11 @@ export const ContainerSuccess = styled.div`
   margin-top: 10rem;
   text-align: center;
   button {
+    border-radius: 0.6rem;
     padding: 1rem;
     margin-top: 0.8rem;
     text-transform: uppercase;
     text-align: center;
+    color: #fbfbfb;
   }
 `;
