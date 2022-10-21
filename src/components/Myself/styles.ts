@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   padding-top: 15%;
-  color: #ffff;
+
   display: flex;
   justify-content: space-between;
   gap: 8rem;
@@ -25,7 +25,7 @@ export const Container = styled.section`
   }
   .button {
     margin-top: 5rem;
-    padding: 1.8rem 6rem;
+    padding: 1.4rem 6rem;
   }
   .myself-image {
     img {
