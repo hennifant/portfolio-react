@@ -36,6 +36,7 @@ export const Container = styled.section`
       }
       a {
         color: var(--black);
+        font-weight: 500;
       }
       &:hover {
         background-color: var(--pink);

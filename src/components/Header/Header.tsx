@@ -5,18 +5,29 @@ import { useState } from "react";
 
 export function Header() {
   const [isactive, setActive] = useState(false);
+  function toggleTheme() {
+    let html = document.getElementsByTagName("html")[0];
+    html.classList.toggle("light");
+  }
   function closeMenu() {
     setActive(false);
   }
 
   return (
-    <Container>
+    <Container className="header-fixed">
       <Router>
         <HashLink smooth to="#home" className="logo">
           <span>H</span>
           <span>Schwichow</span>
         </HashLink>
-
+        <input
+          onChange={toggleTheme}
+          className="container_toggle"
+          type="checkbox"
+          id="switch"
+          name="mode"
+        />
+        <label htmlFor="switch">Toggle</label>
         <nav className={isactive ? "active" : ""}>
           <NavHashLink smooth to="#home" onClick={closeMenu}>
             Home
