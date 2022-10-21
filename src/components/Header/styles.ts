@@ -85,14 +85,21 @@ export const Container = styled.header`
     width: 55px;
     height: 30px;
     background: var(--green);
-    margin: 0 auto;
-    display: flex;
+
+    display: block;
     justify-content: center;
     align-items: center;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
     position: relative;
+    margin-left: auto;
+    right: 10px;
+  }
+  @media only screen and (max-width: 800px) {
+    label {
+      position: relative;
+    }
   }
   label:after {
     content: "";
@@ -119,11 +126,14 @@ export const Container = styled.header`
     transform: translateX(-100%);
   }
   @media (max-width: 960px) {
-    padding: 1.8rem 2rem;
+    padding: 1.8rem 3rem;
     .menu {
       display: block;
     }
     nav {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow: hidden;
       opacity: 0;
       visibility: hidden;
       flex-direction: column;
