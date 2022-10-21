@@ -202,7 +202,7 @@ export function Portfolio() {
           </div>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="flipInX" delay={0.6 * 1000}>
+        <ScrollAnimation animateIn="flipInX" delay={0.8 * 1000}>
           <div className="project">
             <header>
               <svg
@@ -244,7 +244,7 @@ export function Portfolio() {
           </div>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="flipInX" delay={0.6 * 1000}>
+        <ScrollAnimation animateIn="flipInX" delay={1 * 1000}>
           <div className="project">
             <header>
               <svg

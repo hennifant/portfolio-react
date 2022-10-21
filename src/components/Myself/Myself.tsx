@@ -13,10 +13,10 @@ export function Myself() {
         <ScrollAnimation animateIn="fadeInUp" delay={0.2 * 1000}>
           <h1>Henning Schwichow</h1>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.4 * 1000}>
           <h3>Frontend Entwickler</h3>
         </ScrollAnimation>
-        <ScrollAnimation animateIn="fadeInUp" delay={1 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.6 * 1000}>
           <p className="small-resume">
             Ich bin Quereinsteiger in die IT und habe in einem Bootcamp bei neue
             fische gelernt Web Applikationen mit JavaScript und React zu
@@ -25,7 +25,7 @@ export function Myself() {
           </p>
         </ScrollAnimation>
 
-        <ScrollAnimation animateIn="fadeInUp" delay={1.4 * 1000}>
+        <ScrollAnimation animateIn="fadeInUp" delay={0.8 * 1000}>
           <BrowserRouter>
             <NavHashLink smooth to="#contact" className="button">
               Contact
