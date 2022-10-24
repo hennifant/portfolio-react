@@ -1,5 +1,7 @@
 import { Container } from "./styles";
 
+import profileImage from "../../assets/hennifant.jpg";
+import awsIcon from "../../assets/aws-logo.svg";
 import cssIcon from "../../assets/css-icon.svg";
 import htmlIcon from "../../assets/html-icon.svg";
 import jsIcon from "../../assets/js-icon.svg";
@@ -45,7 +47,7 @@ export function About() {
         <div className="hard-skills">
           <div className="skills">
             <ScrollAnimation animateIn="fadeInUp" delay={0.1 * 1000}>
-              <img src={reactIcon} alt="React" />
+              <img src={awsIcon} alt="AWS" />
             </ScrollAnimation>
           </div>
 
@@ -87,7 +89,7 @@ export function About() {
       </div>
       <div className="about-image">
         <ScrollAnimation animateIn="fadeInRight" delay={0.6 * 1000}>
-          <img src="" alt="Myself" />
+          <img src={profileImage} alt="Myself" />
         </ScrollAnimation>
       </div>
     </Container>

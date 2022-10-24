@@ -12,7 +12,7 @@ export const Container = styled.section`
     flex-wrap: wrap;
     gap: 1.8rem;
   }
-  .container {
+  .skills {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,7 +39,8 @@ export const Container = styled.section`
     text-align: center;
     img {
       margin-top: 2rem;
-      width: 100%;
+      width: 50%;
+      border-radius: 50%;
       filter: grayscale(1);
       transition: filter 0.5s;
       &:hover {

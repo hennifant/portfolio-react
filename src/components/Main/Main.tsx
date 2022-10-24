@@ -1,4 +1,5 @@
 import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
 import { Container } from "./styles";
 import { Myself } from "../Myself/Myself";
 import { About } from "../About/About";
@@ -17,10 +18,19 @@ import typescriptIcon from "../../assets/typescript-icon.svg";
 import vscodeIcon from "../../assets/vscode-icon.svg";
 
 export function Main() {
+  const particlesInit = async (main) => {
+    console.log(main);
+
+    // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(main);
+  };
   return (
     <Container>
       <Particles
         id="tsparticles"
+        init={particlesInit}
         options={{
           fullScreen: {
             enable: true,
